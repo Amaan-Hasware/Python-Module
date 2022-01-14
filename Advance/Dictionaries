@@ -1,0 +1,77 @@
+# Dictionary is an unordered collection of data stored as a pair of key and value.
+# Key acts as index numbers for dictionaries, But in dictionary, index numbers that is keys can also be Strings
+# Syntax:
+#       variable_name={ key1:value1, key2:value2, ... }
+
+d = {1: "Welcome", 2: "To", 3: "My", 4: "Github", 5: "Repository"}
+print(d)
+print(type(d))
+
+# Let's make a dictionary with a String name
+d1 = {"Name": "Amaan", "Age": 18, "Profession": "Student"}
+print(d1)
+
+# Nested Dictionaries
+d3 = {"Name": {"First": "Amaan", "Last": "Hasware"}, "Age": 18, "Profession": "Student"}
+print(d3)
+
+print()
+
+# print(d3['Name'])
+
+print()
+
+# Adding Elements In Dictionaries
+
+d4 = {}
+print(d4)
+d4[0] = "Hello"  # The dictionary must be created before adding the values
+print(d4)
+d4[1] = "World"
+print(d4)
+
+# Accessing the elements
+
+print(d3)
+print(d3["Name"]["First"])
+print(d3["Name"]["Last"])
+
+# Deleting the values
+# 1) is the  pop method which basically deletes the value, you just have to mention the key name
+
+print(d3)  # Here the default value of Age will be shown
+d3.pop("Age")  # Here the key age along with it's value 18 has been deleted
+print(d3)
+
+# 2) is the popitem which deletes the last key n it's value
+print(d3)  # here the last key is profession ,
+d3.popitem()  # here it is deleted
+print(d3)
+
+# Using In-built functions
+# To get only the values of the dictionary we use 'values' keyword
+print(d4)
+print(d4.values())
+
+# To get only the keys of the dictionary we use 'key' keyword
+print(d4.keys())
+
+# Sets
+# Sets are same as DItionaries but they don't have keys , just the values. Set is a unordered collection of unique
+# elements
+s = set([1, 2, 3, 4])
+print(s)
+#  You can add elements to Sets
+s.add("Add")
+print(s)
+
+# To create a Immutable set use forzen set attribute/keyword
+fs = frozenset(["Will not change value"])
+
+# You can do union?intersection with sets
+s1 = set([1, 3, 7, 2])
+s2 = set([3, 2, 8, 9])
+union = s1.union(s2)
+print(union)
+union = s1.intersection(s2)
+print(union)
